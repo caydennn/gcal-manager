@@ -77,15 +77,6 @@ def deleteEvent(service, event_id):
     service.events().delete(calendarId='primary', eventId=event_id).execute()
     return
 
-def testDeleteEvent(service):
-    event_id = '785grn7j0ub7skh9dqk9gqvnb2'
-    event = service.events().get(calendarId='primary', eventId=event_id).execute()
-
-    print (f"Deleting event: {event['summary']}")
-    service.events().delete(calendarId='primary', eventId=event_id).execute()
-   
-    return 
-
 
 if __name__ == '__main__':
     keywords = []
